@@ -25,6 +25,10 @@ services:
       - /Users/mulo/Torrent/data/amule/conf:/home/amule/.aMule
       - /Users/mulo/Torrent/data/amule/data:/incoming
       - /Users/mulo/Torrent/data/amule/tmp:/temp
+    deploy:
+      resources:
+        limits:
+          cpus: '1.00'
     restart: unless-stopped
     networks:
       - amule
